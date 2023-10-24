@@ -13,18 +13,31 @@ class DoublyLinkedList {
     this.length = 0
   }
 
-  addToHead(val) {
-    const newNode = DoublyLinkedListNode(val)
-    if(!this.head) {
-      this.head = newNode
-      this.tail = newNode
-      }
-      else {
-        newNode.next = this.head
-        this.head.prev = newNode
-        this.head = newNode
-      }
+  // addToHead(val) {
+  //   const newNode = DoublyLinkedListNode(val)
+  //   if(!this.head) {
+  //     this.head = newNode
+  //     this.tail = newNode
+  //     }
+  //     else {
+  //       newNode.next = this.head
+  //       this.head.prev = newNode
+  //       this.head = newNode
+  //     }
     
+  // }
+
+  addToHead(val) {
+    const newNode = new DoublyLinkedListNode(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+    this.length++;
   }
 
   addToTail(val) {

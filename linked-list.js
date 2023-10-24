@@ -24,7 +24,7 @@ class LinkedList {
   }
 
   addToTail(val) {
-    const newNode = new LinkedListNode
+    const newNode = new LinkedListNode(val)
     if (!this.head) {
       this.head = newNode
     }
@@ -35,6 +35,7 @@ class LinkedList {
       }
       current.next = newNode
     }
+    this.length ++
   }
 
   // You can use this function to help debug
